@@ -1,0 +1,30 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch">
+
+    <title>Wumpus Scores</title>
+  </head>
+  <body>
+    <header>
+      <h1>scores:</h1>
+    </header>
+<script>
+    async function GetEntries() {
+    const json = await fetch("/getEntries?" + Math.round(Math.random() * 10000));
+    const entries = await json.json() // parse the JSON from the server
+    return entries;
+  }
+  GetEntries().then(entries => {
+    entries.sort((a,b) => b.score - a.score);
+    for (let i = 0; i < entries.length; i++)
+    document.body.innerHTML += "<p>" + (i + 1) + ". " + entries[i].username + "....." + entries[i].score + "</p>";
+  });
+    </script>
+  </body>
+</html>
