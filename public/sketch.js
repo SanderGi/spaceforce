@@ -305,7 +305,7 @@ function loop(timestamp) {
     }
 }
 var lastRender = 0;
-setTimeout(window.requestAnimationFrame(loop), 2000);
+window.body.onload = function() { window.requestAnimationFrame(loop) };
 // function imgLoaded() {
 //     window.requestAnimationFrame(loop);
 // }
