@@ -271,10 +271,12 @@ function loop(timestamp) {
     // win condition
     if (worldPos > winMoment + 100) {
         alert("VICTORY!!");
+        location.replace(location.href);
     } 
     // lose condition
     else if (worldPos > deathMoment + 100) {
         alert("You died :(");
+        location.replace(location.href);
     }
     else {
         lastRender = timestamp;
