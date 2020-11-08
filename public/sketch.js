@@ -275,7 +275,23 @@ function loop(timestamp) {
     } 
     // lose condition
     else if (worldPos > deathMoment + 100) {
-        alert("You died :(");
+          let tips = [
+            "Tip: Prioritize your fire on the most dangerous enemies",
+            "Tip: A wasted bullet is a wasted opportunity",
+            "Tip: Take out straight shooting enemies before their bullets reach the end",
+            "Trick: You can partly hide on the edges of the screen",
+            "Tip: Learn the level to anticipate enemy positions with concentrated fire",
+            "Tip: Use your speed to navigate to favorable positions",
+            "Trick: Get out of a jam by strategically getting hit to avoid fatal damage",
+            "Trick: Moving ahead of certain shooting patterns allows you to outrun the enemy bullets",
+            "Trick: A wall of enemy fire can often be avoided by flying around it",
+            "Tip: Don't get distracted looking at the background",
+            "Tip: Give your eyes a break every once in a while",
+            "Tip: Choose your battles wisely",
+            "Pro tip: A shot only counts as a hit if within a certain radius of a player/enemy",
+            "Trick: You can slightly touch bullets and they will glide of your armor"
+        ];
+        alert("You died :( \n" + tips[Math.floor(tips.length * Math.random())]);
         location.replace(location.href);
     }
     else {
