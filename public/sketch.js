@@ -275,7 +275,7 @@ function loop(timestamp) {
     } 
     // lose condition
     else if (worldPos > deathMoment + 100) {
-          let tips = [
+         let tips = [
             "Tip: Prioritize your fire on the most dangerous enemies",
             "Tip: A wasted bullet is a wasted opportunity",
             "Tip: Take out straight shooting enemies before their bullets reach the end",
@@ -289,7 +289,12 @@ function loop(timestamp) {
             "Tip: Give your eyes a break every once in a while",
             "Tip: Choose your battles wisely",
             "Pro tip: A shot only counts as a hit if within a certain radius of a player/enemy",
-            "Trick: You can slightly touch bullets and they will glide of your armor"
+            "Trick: You can slightly touch bullets and they will glide of your armor",
+            "Pro tip: The most important thing is to have fun",
+            "Tip: If you don't get it on the first try, you're guaranteed to get it on a later attempt as long as you keep trying",
+            "Tip: Keep your finger in a position where both your ship and incoming fire is visible",
+            "Tip: It is always possible, you just have to find the right path through enemy fire",
+            "Tip: See an opening? Take it! Unless you know it is a trap from a previous attempt..."
         ];
         alert("You died :( \n" + tips[Math.floor(tips.length * Math.random())]);
         location.replace(location.href);
