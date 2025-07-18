@@ -1,28 +1,27 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
+  "name": "spaceforce",
   "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "description": "A space themed Shoot Em Up",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "DB_FILE=data/database.nedb PORT=3000 nodemon --inspect server.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "nedb": "^1.8.0"
+    "@seald-io/nedb": "^4.1.2",
+    "express": "^4.17.1"
   },
   "engines": {
-    "node": "12.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "node": "18.x"
   },
   "license": "MIT",
   "keywords": [
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "private": true,
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
